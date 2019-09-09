@@ -1,0 +1,77 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ullmo2017}
+Ullmo D., Swiecicki I., and Gobron T.
+\newblock Quadratic mean field games.
+\newblock {\em arXiv:1708.07730}, 2017.
+
+\bibitem{Gueant2009}
+O.~Gu\'eant.
+\newblock A reference case for mean field games models.
+\newblock {\em Journal de Mathematiques Pures et Appliquees}, 92(3):276--294,
+  2009.
+
+\bibitem{Fleming1978}
+W.H. Fleming.
+\newblock Exit probabilities and optimal stochastic control.
+\newblock {\em Applied Math. Optim}, 9:329--346, 1978.
+
+\bibitem{Kappen2005a}
+H.~J. Kappen.
+\newblock Linear theory for control of nonlinear stochastic systems.
+\newblock {\em Phys. Rev. Lett.}, 95:200201, Nov 2005.
+
+\bibitem{Kappen2005b}
+H.~J. Kappen.
+\newblock Path integrals and symmetry breaking for optimal control theory.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  11:P11011, 2005.
+
+\bibitem{Theodorou2011IPI}
+E.~Theodorou.
+\newblock {\em Iterative Path Integral Stochastic Optimal Control: Theory and
+  Applications to Motor Control}.
+\newblock PhD thesis, University of Southern California, Los Angeles, CA, USA,
+  2011.
+
+\bibitem{Elsgolc1961}
+L.~Elsgolc.
+\newblock {\em Calculus of Variations}.
+\newblock Dover, Mineola, New York, 2007.
+
+\bibitem{Grady2017}
+Grady Williams, Brian Goldfain, Paul Drews, James~M. Rehg, and Evangelos~A.
+  Theodorou.
+\newblock Autonomous racing with autorally vehicles and differential games.
+\newblock {\em CoRR}, abs/1707.04540, 2017.
+
+\bibitem{barbaro2016phase}
+Alethea~BT Barbaro, Jos{\'e}~A Ca{\~n}izo, Jos{\'e}~A Carrillo, and Pierre
+  Degond.
+\newblock Phase transitions in a kinetic flocking model of cucker--smale type.
+\newblock {\em Multiscale Modeling \& Simulation}, 14(3):1063--1088, 2016.
+
+\bibitem{Bakshi2018Chaos}
+P.~Grover, K.~Bakshi, and Theodorou~E. A.
+\newblock A homogeneous model for flocking.
+\newblock {\em arXiv:1803.05250v3}, 2018.
+
+\bibitem{Opper2017}
+Manfred Opper.
+\newblock An estimator for the relative entropy rate of path measures for
+  stochastic differential equations.
+\newblock {\em Journal of Computational Physics}, 330:127 -- 133, 2017.
+
+\bibitem{Burger2011}
+Martin Burger, Marco~Di Francesco, Peter~A. Markowich, and Marie-Therese
+  Wolfram.
+\newblock Mean field games with nonlinear mobilities in pedestrian dynamics.
+\newblock {\em Discrete \& Continuous Dynamical Systems - B},
+  19(1531-3492-2014-5-1311):1311, 2014.
+
+\bibitem{Papas2014}
+J.~Papastavridis.
+\newblock {\em Analytical Mechanics}.
+\newblock World Scientific, reprint edition, 2014.
+
+\end{thebibliography}

@@ -1,0 +1,537 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage{times}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{xspace}
+\usepackage{cite}
+\usepackage{comment}
+\usepackage{lipsum}
+
+\DeclareMathSizes{10}{10}{10}{10}
+\usepackage{anysize}
+\usepackage{fancyhdr}
+\marginsize{3cm}{2cm}{0.5cm}{0.5cm}
+
+\usepackage{algorithm}
+\usepackage[]{algpseudocode}
+
+\usepackage{amsthm}
+
+\renewcommand{\labelenumi}{\roman{enumi})}
+\newcommand{\rpartial}{{\mathrm{\partial}}}
+\newcommand{\rinf}{{\mathrm \inf}}
+\newcommand{\rd}{{\mathrm d}}
+
+\newcommand{\rp}{{\mathrm p}}
+\newcommand{\re}{{\mathrm e}}
+\newcommand{\rdelta}{{\mathrm \delta}}
+\newcommand{\rtr}{{\mathrm{tr}}}
+\newcommand{\rP}{{\mathrm{P}}}
+\newcommand{\rT}{{\mathrm{T}}}
+\newcommand{\rvec}{{\mathrm{vec}}}
+\newcommand{\rtau}{{\mathrm{\tau}}}
+\newcommand{\va}{{\bf a}}
+\newcommand{\vb}{{\bf b}}
+\newcommand{\vc}{{\bf c}}
+\newcommand{\vx}{{\bf x}}
+\newcommand{\vy}{{\bf y}}
+\newcommand{\vz}{{\bf z}}
+\newcommand{\vp}{{\bf p}}
+\newcommand{\vt}{{\bf t}}
+\newcommand{\dvx}{{\bf dx}}
+\newcommand{\vdu}{{\bf du}}
+\newcommand{\vdy}{{\bf dy}}
+\newcommand{\vq}{{\bf q}}
+\newcommand{\vr}{{\bf r}}
+\newcommand{\vs}{{\bf  s}}
+\newcommand{\vf}{{\bf f}}
+\newcommand{\vg}{{\bf g}}
+\newcommand{\vG}{{\bf G}}
+\newcommand{\vu}{{\bf u}}
+\newcommand{\vv}{{\bf  v}}
+\newcommand{\vI}{{\bf I}}
+\newcommand{\vh}{{\bf h}}
+\newcommand{\vl}{{\bf l}}
+\newcommand{\vdx}{{\bf dx}}
+\newcommand{\vdw}{{\bf dw}}
+\newcommand{\vw}{{\bf w}}
+\newcommand{\vA}{{\bf A}}
+\newcommand{\vR}{{\bf R}}
+\newcommand{\vE}{{\bf E}}
+\newcommand{\vL}{{\bf L}}
+\newcommand{\vK}{{\bf K}}
+\newcommand{\vJ}{{\bf J}}
+\newcommand{\vF}{{\bf F}}
+\newcommand{\vM}{{\bf M}}
+\newcommand{\vD}{{\bf D}}
+\newcommand{\vN}{{\bf N}}
+\newcommand{\vV}{{\bf V}}
+\newcommand{\vH}{{\bf H}}
+\newcommand{\vT}{{\bf T}}
+\newcommand{\vC}{{\bf C}}
+\newcommand{\vO}{{\bf O}}
+\newcommand{\vQ}{{\bf Q}}
+\newcommand{\vB}{{\bf B}}
+\newcommand{\vS}{{\bf S}}
+\newcommand{\vX}{{\bf X}}
+\newcommand{\vY}{{\bf Y}}
+\newcommand{\vZ}{{\bf Z}}
+\newcommand{\vP}{{\bf P}}
+\newcommand{\vxi}{{\mbox{\boldmath$\xi$}}}
+\newcommand{\vpi}{{\mbox{\boldmath$\pi$}}}
+\newcommand{\vdomega}{{\bf d\omega}}
+\newcommand{\vlambda}{{\mbox{\boldmath$\lambda$}}}
+\newcommand{\vBamma}{{\mbox{\boldmath$\Gamma$}}}
+\newcommand{\VTheta}{{\mbox{\boldmath$\Theta$}}}
+\newcommand{\vPhi}{{\mbox{\boldmath$\Phi$}}}
+\newcommand{\vphi}{{\mbox{\boldmath$\phi$}}}
+\newcommand{\vPsi}{{\mbox{\boldmath$\Psi$}}}
+\newcommand{\ve}{{\mbox{\boldmath$\epsilon$}}}
+\newcommand{\vSigma}{{\mbox{\boldmath$\Sigma$}}}
+\newcommand{\valpha}{{\mbox{\boldmath$\alpha$}}}
+\newcommand{\vmu}{{\mbox{\boldmath$\mu$}}}
+\newcommand{\vbeta}{{\mbox{\boldmath$\beta$}}}
+\newcommand{\vomega}{{\mbox{\boldmath$\omega$}}}
+\newcommand{\vtau}{{\mbox{\boldmath$\tau$}}}
+\newcommand{\vdtau}{{\mbox{\boldmath$d\tau$}}}
+\newcommand{\vtheta}{{\mbox{\boldmath$\theta$}}}\newcommand{\dataset}{{\cal D}}
+\newcommand{\fracpartial}[2]{\frac{\partial #1}{\partial  #2}}
+\newcommand{\vcalS}{{\mbox{\boldmath$\cal{S}$}}}
+\newcommand{\vcalU}{{\mbox{\boldmath$\cal{U}$}}}
+\newcommand{\vcalD}{{\mbox{\boldmath$\cal{D}$}}}
+\newcommand{\vcalJ}{{\mbox{\boldmath$\cal{J}$}}}
+\newcommand{\vcalE}{{\mbox{\boldmath$\cal{E}$}}}
+\newcommand{\vcalF}{{\mbox{\boldmath$\cal{F}$}}}
+\newcommand{\calH}{{\cal H}}
+\newcommand{\calF}{{\cal F}}
+\newcommand{\calN}{{\cal N}}
+\newcommand{\calL}{{\cal L}}
+\newcommand{\calP}{{\cal P}}
+\newcommand{\calQ}{{\cal Q}}
+\newcommand{\calU}{{\cal U}}
+\newcommand{\vcalL}{{\mbox{\boldmath$\cal{L}$}}}
+\newcommand{\vcalZ}{{\mbox{\boldmath$\cal{Z}$}}}
+\newcommand{\vcalG}{{\mbox{\boldmath$\cal{G}$}}}
+\newcommand{\vcalN}{{\mbox{\boldmath$\cal{N}$}}}
+\newcommand{\vcalM}{{\mbox{\boldmath$\cal{M}$}}}
+\newcommand{\vcalH}{{\mbox{\boldmath$\cal{H}$}}}
+\newcommand{\vcalC}{{\mbox{\boldmath$\cal{C}$}}}
+\newcommand{\vcalO}{{\mbox{\boldmath$\cal{O}$}}}
+\newcommand{\vcalP}{{\mbox{\boldmath$\cal{P}$}}}
+\newcommand{\vcalB}{{\mbox{\boldmath$\cal{B}$}}}
+\newcommand{\vcalA}{{\mbox{\boldmath$\cal{A}$}}}
+\newcommand{\vcalg}{{\mbox{\boldmath$\cal{g}$}}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\T}{^\mathsf{T}}
+
+
+\newcommand{\Qb}{\mathbb{Q}}
+\newcommand{\Pb}{\mathbb{P}}
+\newcommand{\Xspace}{\mathcal{X}}
+\newcommand{\snew}{\mathbf{x}^\prime}
+\newcommand{\s}{\mathbf{x}}
+\newcommand{\Pas}[2]{\mathcal{P}\left({#1}|{#2}\right)}
+\newcommand{\Pol}[2]{\mathcal{U}\left({#1}|{#2}\right)}
+\newcommand{\PolOpt}[2]{\mathcal{U}^{*}\left({#1}|{#2}\right)}
+\newcommand{\PolPasT}[1]{\mathcal{P}\left({#1}\right)}
+\newcommand{\PolT}[1]{\mathcal{U}\left({#1}\right)}
+\newcommand{\traj}{\mathbf{X}}
+\newcommand{\KL}[2]{\mathcal{I}\left({#1}\parallel {#2}\right)}
+\newcommand{\costt}[1]{\mathcal{J}\left({#1}\right)}
+\newcommand{\logb}[1]{\log\left({#1}\right)}
+\newcommand{\expb}[1]{\exp\left({#1}\right)}
+\newcommand{\val}[2]{\mathit{V}_{#2}\left({#1}\right)}
+\newcommand{\zt}[2]{\Phi_{#2}\left({#1}\right)}
+\newcommand{\nZ}[2]{\mathcal{G}_t[\Phi]\left({#1}\right)}
+\newcommand{\ExP}[2]{\E_{{#1}}{\left[#2\right]}}
+
+\newcommand{\Rb}{\mathbb{R}}
+\newcommand{\Eb}{\mathbb{E}}
+
+\newcommand{\rf}{{\mathrm f}}
+\newcommand{\barvx}{\bar{\mathbf{\vx}}}
+\newcommand{\barvu}{\bar{\mathbf{\vu}}}
+\newcommand{\tilGamma}{\tilde{\Gamma}}
+\newcommand{\tilphi}{\tilde{\phi}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+
+\begin{document}
+	
+	\title{\Large Coupled Soliton Dynamics in Quadratic Mean Field Games
+	}
+	\author{Kaivalya Bakshi}
+	
+	\date{\today}
+	
+	\maketitle
+	
+	
+	
+\begin{abstract}
+	In this report we discuss coupled dynamics of solitons introduced in \cite{Ullmo2017} modeling Quadratic Mean Field Games (MFG) and introduce an action functional for admitting nonlinear Langevin dynamics in the soliton model.
+\end{abstract}
+
+
+
+\section{Coupled Soliton Dynamics}
+\label{sec:1}
+
+
+\subsection{Dynamics}
+
+\indent From pp 49, \cite{Ullmo2017} plugging the forward backward PDE ansatz into the general variational ansatz in the 1D dynamics case, we obtain the Lagrangian expression
+\begin{align}
+	S[X_t,P_t,\Sigma_t,\Lambda_t] = \int_{0}^{T} L(X_t,P_t,\Sigma_t,\Lambda_t) \; \rd t = \int_{0}^{T}& \dot{P_t}X_t - \frac{\Lambda_t \dot{\Sigma_t}}{2\Sigma_t} + \frac{P_t^2}{\mu} + \frac{\Lambda_t^2 - \mu^2\sigma^4}{8\mu\Sigma_t^2} + \big< U_0 \big> \notag \\
+	&+ \frac{g}{(\alpha+1)\sqrt{(\alpha+1)(2\pi)^\alpha}} \frac{1}{\Sigma_t^\alpha} \; \rd t
+\end{align}
+wherein one can obtain as in appendix B \cite{Ullmo2017}
+\begin{align}
+	\int_{0}^{T} \delta\Big( \dot{P_t}X_t + \frac{P_t^2}{\mu} \Big) \rd t =& \int_{0}^{T} \dot{P_t}\delta X_t + \left( \frac{P_t}{\mu} - \dot{X_t} \right) \delta P_t \; \rd t \\
+	\int_{0}^{T} \delta\Big( - \frac{\Lambda_t \dot{\Sigma_t}}{2\Sigma_t} \Big) \; \rd t =& \int_{0}^{T} \frac{\dot{\Lambda_t}}{2\Sigma_t} \delta \Sigma_t - \frac{\dot{\Sigma_t}}{2\Sigma_t} \delta \Lambda_t \; \rd t \\
+	\int_{0}^{T} \delta\Big( - \frac{\Lambda_t \dot{\Sigma_t}}{2\Sigma_t} \Big) \; \rd t =& \int_{0}^{T} - \frac{\Lambda_t}{4\mu\Sigma_t^2} \delta \Lambda_t - \frac{\Lambda_t^2 - \mu^2\sigma^4}{4\mu\Sigma_t^3} \delta \Sigma_t \; \rd t \\
+	\int_{0}^{T} \delta\Big( \frac{g}{(\alpha+1)\sqrt{(\alpha+1)(2\pi)^\alpha}} \frac{1}{\Sigma_t^\alpha} \Big) \; \rd t =& \int_{0}^{T} \frac{-g\alpha}{(\alpha+1)\sqrt{(\alpha+1)(2\pi)^\alpha}} \frac{1}{\Sigma_t^{\alpha+1}} \delta \Sigma_t \; \rd t.
+\end{align}
+Coupling between the ODEs on $(X_t,\Sigma_t)$ can occur only due to the potential energy $\big< U_0 \big>(X_t,\Sigma_t)$. We note some steps in computing the variation before stating the result. Since $\big< U_0 \big> = \int U_0(x)\frac{\re^\frac{-(x-X_t)^2}{2\Sigma_t^2}}{\sqrt{2\pi}\Sigma_t} \;\rd x$, we need to compute
+\begin{equation}
+	\exp(\frac{-(x-X_t-\delta X_t)^2}{2(\Sigma_t +\delta \Sigma_t)^2}) \overset{O(\delta X_t,\delta\Sigma_t)}{=} \re^\frac{-(x-X_t)^2}{2\Sigma_t^2}  \left( 1 + \frac{(x-X_t)}{\Sigma_t^2} \delta X_t + \frac{(x-X_t)^2}{\Sigma_t^3} \delta \Sigma_t \right)
+\end{equation}
+and further
+\begin{align}
+	\delta \left( \frac{\re^\frac{-(x-X_t)^2}{2\Sigma_t^2}}{\Sigma_t} \right) \overset{O(\delta X_t,\delta\Sigma_t)}{=}& \frac{\re^\frac{-(x-X_t)^2}{2\Sigma_t^2}}{\Sigma_t}  \left( \frac{(x-X_t)}{\Sigma_t^2} \delta X_t + \frac{(x-X_t)^2}{\Sigma_t^3} \delta \Sigma_t - \frac{1}{\Sigma_t} \delta \Sigma_t \right) \notag  \\
+	=& \frac{\re^\frac{-(x-X_t)^2}{2\Sigma_t^2}}{\Sigma_t}  \left( \frac{(x-X_t)}{\Sigma_t^2} \delta X_t + \frac{(x-X_t)^2 -\Sigma_t^2}{\Sigma_t^3} \delta \Sigma_t \right).
+\end{align}
+Integrals of relevance are
+\begin{align}
+	\int U_0(y + X_t) y \calN_y(0,\Sigma_t) \; \rd y =& -\int \nabla U_0(y + X_t) \Sigma_t^2\cdot -\calN_y(0,\Sigma_t) \; \rd y = \Sigma_t^2 \big<  \nabla U_0(y + X_t) \big> \\
+	\int U_0(y + X_t) y^2 \calN_y(0,\Sigma_t) \; \rd y =& U_0(y + X_t) \Sigma_t^2 \bigg|_{-\infty}^{+\infty} \\
+	&- \int \nabla U_0(y + X_t) \left( \frac{\Sigma_t^2}{2}\text{erf}\left(\frac{y}{\Sigma_t \sqrt{2}}\right) - \Sigma_t^2 y \calN_y(0,\Sigma_t)   \right) \; \rd y \\
+	-\int U_0(y + X_t) \Sigma_t^2 \calN_y(0,\Sigma_t) \; \rd y =& - U_0(y + X_t) \Sigma_t^2 \bigg|_{-\infty}^{+\infty} + \int \nabla U_0(y + X_t) \left( \frac{\Sigma_t^2}{2}\text{erf}\left(\frac{y}{\Sigma_t \sqrt{2}}\right) \right) \; \rd y.
+\end{align}
+The first order variation may be obtained as
+\begin{equation}
+	\int_{0}^{T} \delta \big< U_0 \big> \; \rd t = \int_{0}^{T} \big<\nabla U_0 \big> \delta X_t + \Sigma_t \big<\nabla^2 U_0 \big> \delta \Sigma_t \rd t.
+\end{equation}
+The required coupled forward backward ODE system is therefore
+\begin{align}
+	\dot{X_t} =& \frac{P_t}{\mu} \\
+	\dot{P_t} =& - \big<\nabla U_0 \big> \\
+	\dot{\Sigma_t} =& \frac{\Lambda_t}{2\mu\Sigma_t} \\
+	\dot{\Lambda_t} =& \frac{\Lambda_t^2 - \mu^2\sigma^4}{2\mu\Sigma_t^2} + \frac{2g\alpha}{(\alpha+1)\sqrt{(\alpha+1)(2\pi)^\alpha}} \frac{1}{\Sigma_t^{\alpha}} - \Sigma_t^2 \big<\nabla^2 U_0 \big> \label{Lambda}.
+\end{align}
+The decoupled soliton dynamics maybe obtained by observing under the delta Dirac distribution assumption, that $\big<\nabla U_0 \big> = \nabla U_0(X_t)$ and $\Sigma_t \rightarrow 0$. \\
+\indent Particularly, $U_0(x) = -\frac{x^4}{4} - \frac{x^2}{2}$ implies $\nabla U_0 = -x^3 - x$, $\nabla^2 U_0 = -3x^2 - 1$, $\nabla^3 U_0 = -6x$, $\nabla^4 U_0 = -6$ so that $\big< U_0 \big> = -\frac{X_t^4 + 6X_t^2 \Sigma_t^2 + 3 \Sigma_t^4}{4} - \frac{X_t^2 + \Sigma_t^2}{2}$, $\big<\nabla U_0 \big> = -X_t^3 - 3X_t\Sigma_t^2 - X_t$, $\big<\nabla^2 U_0 \big> = -3(X_t^2 + \Sigma_t^2) - 1$, $\big<\nabla^3 U_0 \big> = -6X_t$ and $\big<\nabla^4 U_0 \big> = -6$.
+
+\subsection{Hamlitonian mechanics}
+
+%\indent Using the canonical variables $q = \frac{\Sigma_t}{\Sigma_*}, p = -\frac{\Lambda_t \Sigma_*}{2 \Sigma_t} = -\frac{\Lambda_t}{2q}$ we have the Langrangian
+%\begin{equation}
+%	L(t) = \dot{P_t} X_t + p \dot{q} + \frac{P_t^2}{2 \mu} + \frac{p^2}{2 \mu \Sigma_*^2} - \frac{\mu\sigma^4}{8 \Sigma_*^2 q^2} + \frac{k}{\Sigma_*^\alpha q^\alpha} + \big< U_0 \big> = \dot{P_t} X_t + p \dot{q} - H(X_t,P_t,q,p)
+%\end{equation}
+%where $k := \frac{g}{\alpha + 1} \frac{1}{\sqrt{(\alpha+1) (2 \pi)^\alpha}}$ and the Hamiltonian
+%\begin{equation}
+%	H(X_t,P_t,q,p) \triangleq -\frac{P_t^2}{2 \mu} - \frac{p^2}{2 \mu \Sigma_*^2} + \frac{\mu\sigma^4}{8 \Sigma_*^2 q^2} - \frac{k}{\Sigma_*^\alpha q^\alpha} - \big< U_0 \big>.
+%\end{equation}
+%From the Hamiltonian system, recognizing the Poisson conjugate momenta $(X_t,p)$ the equations of motion are
+%\begin{equation}
+%	\begin{bmatrix}
+%	\dot{X_t} \\ \dot{p} \\ \dot{P_t} \\ \dot{q}
+%	\end{bmatrix} = \begin{bmatrix}
+%	-\frac{\partial H}{\partial P_t} \\ -\frac{\partial H}{\partial q} \\ \frac{\partial H}{\partial X_t} \\ \frac{\partial H}{\partial p}
+%	\end{bmatrix} = 
+%	\begin{bmatrix}
+%	\frac{P_t}{\mu} \\ \frac{\mu \sigma^4}{4 \Sigma_*^2 q^3} - \frac{k \alpha}{\Sigma_*^\alpha q^{\alpha + 1}} + q \Sigma_*^2 \big< \nabla^2 U_0 \big> \\ -\big< \nabla U_0 \big> \\ -\frac{p}{\mu \Sigma_8^2}
+%	\end{bmatrix}
+%\end{equation}
+%because $\frac{\partial < f >}{\partial X_t}(X_t,q) = < \nabla f >$, $\frac{\partial < f >}{\partial q}(X_t,q) = q \Sigma_*^2 < \nabla^2 f >$ and the conserved total energy is 
+%\begin{equation}
+%	E_\text{tot}(t) = \frac{P_t^2}{2 \mu} + \frac{p^2}{2 \mu \Sigma_*^2} - \frac{\mu\sigma^4}{8 \Sigma_*^2 q^2} + \frac{k}{\Sigma_*^\alpha q^\alpha} + \big< U_0 \big>.
+%\end{equation}
+%Candidate equilibrium point $(X_*,P_*,q_*,p_*) = (0,0,1,0)$ for the concerned equilibrium equation
+%\begin{equation}
+%	\frac{- \mu\sigma^4}{2\Sigma_*^2 q^3} + \frac{2k\alpha}{\Sigma_*^\alpha q^{\alpha + 1}} - 2 q \Sigma_*^2 \big<\nabla^2 U_0 \big>
+%\end{equation}
+%does not satisfy the equilibrium equation of \eqref{Lambda}, due to the last dynamic coupling related term in
+%\begin{equation}
+%	\frac{- \mu\sigma^4}{2\Sigma_*^2 q^2} + \frac{2k\alpha}{\Sigma_*^\alpha q^{\alpha}} - q^2 \Sigma_*^2 \big<\nabla^2 U_0 \big>.
+%\end{equation}
+%Finally the Jacobian at $(X_*,P_*,q_*,p_*)$ is
+%\begin{align}
+%	J_* = \begin{bmatrix}
+%	0 & \frac{1}{\mu} & 0 & 0 \\
+%	- \big< \nabla^2 U_0 \big> & 0 & - q_* \Sigma_*^2 \big< \nabla^3 U_0 \big> & 0 \\
+%	0 & 0 & 0 & -\frac{1}{\mu \Sigma_*^2} \\
+%	q_* \Sigma_*^2 \big< \nabla^3 U_0 \big> & 0 & -\frac{\partial^2 H}{\partial q^2} & 0
+%	\end{bmatrix}
+%\end{align}
+%where
+%\begin{equation}
+%	-\frac{\partial^2 H}{\partial q^2} = -\frac{3 \mu \Sigma^4}{4 \Sigma_*^2 q^4} + \frac{k \alpha (\alpha + 1)}{\Sigma_*^\alpha q_*^{\alpha + 2}} + \Sigma_*^2 \big< \nabla^2 U_0 \big> + q_*^2 \Sigma_*^2 \big< \nabla^4 U_0 \big>.
+%\end{equation}
+
+\indent Modifying the first term in the Lagrangian as $\int_{0}^{T} \dot{P_t} X_t = {X_t} P_t\bigg|_{0}^{T} - \int_{0}^{T} \dot{X_t} P_t$ we arrive at a Hamiltonian system for canonical variables defined as follows. Using the canonical variables $(q_1, p_1, q_2, p_2) = (X_t, P_t, \Sigma_t, \frac{\Lambda_t}{2 \Sigma_t} = \frac{\Lambda_t}{2q_2})$ we have the Langrangian
+\begin{equation}
+L(t) = - p_2 \dot{q_1} - p_2 \dot{q_2} + \frac{P_t^2}{2 \mu} + \frac{p_2^2}{2 \mu} - \frac{\mu\sigma^4}{8 q_2^2} + \frac{k}{q_2^\alpha} + \big< U_0 \big>
+\end{equation}
+where $k := \frac{g}{\alpha + 1} \frac{1}{\sqrt{(\alpha+1) (2 \pi)^\alpha}}$. Since $\delta L$ must be set equal to zero to obtain dynamical equations, we may equivalently consider the Lagrangian
+\begin{equation}
+	L(t) = p_2 \dot{q_1} + p_2 \dot{q_2} - \left( \frac{p_1^2}{2 \mu} + \frac{p_2^2}{2 \mu} - \frac{\mu\sigma^4}{8 q_2^2} + \frac{k}{q_2^\alpha} + \big< U_0 \big> \right) = p_2 \dot{q_1} + p_2 \dot{q_2} - H(q,p)
+\end{equation}
+with the Hamiltonian, recognized as the conserved total energy $E_\text{tot}(t)$,
+\begin{equation}
+H(q,p) \triangleq \frac{p_1^2}{2 \mu} + \frac{p_2^2}{2 \mu} - \frac{\mu\sigma^4}{8 q_2^2} + \frac{k}{q_2^\alpha} + \big< U_0 \big>(q_1,q_2).
+\end{equation}
+In this standard  Hamiltonian system, identifying the Poisson conjugate momenta $(p_1,p_2) = (P_t,\frac{\Lambda_t}{2 \Sigma_t})$ and position variables $(q_1,q_2) = (X_t,\Sigma_t)$, the equations of motion are
+\begin{equation}
+\begin{bmatrix}
+\dot{q_1} \\ \dot{p_1} \\ \dot{q_2} \\ \dot{p_2}
+\end{bmatrix} = \begin{bmatrix}
+\nabla_{p_1} H \\ -\nabla_{q_1} H \\ \nabla_{p_2} H \\ -\nabla_{q_2} H
+\end{bmatrix} = 
+\begin{bmatrix}
+\frac{p_1}{\mu} \\  -\big< \nabla U_0 \big> \\ \frac{p_2}{\mu} \\ -\frac{\mu \sigma^4}{4 q_2^3} + \frac{k \alpha}{q_2^{\alpha + 1}} - q_2 \big< \nabla^2 U_0 \big> 
+\end{bmatrix}
+\end{equation}
+because $\frac{\partial \big< f \big>}{\partial X_t}(X_t,\Sigma_t) = \big< \nabla f \big>$, $\frac{\partial \big< f \big>}{\partial \Sigma_t}(X_t,\Sigma_t) = \Sigma_t \big< \nabla^2 f \big>$. If  $U_0(x) = -\frac{x^4}{4} - \frac{x^2}{2}$ then the equilibrium point is $(q_{1*},p_{1*},q_{2*},p_{2*}) = (0,0,q_{2*},0)$ where
+\begin{equation}
+-\frac{\mu\sigma^4}{4 q_{2*}^3} + \frac{k\alpha}{q_{2*}^{\alpha + 1}} - q_{2*} \big<\nabla^2 U_0 \big>(0,q_{2*}) = -\frac{\mu\sigma^4}{4 q_{2*}^3} + \frac{k\alpha}{q_{2*}^{\alpha + 1}} + q_{2*} (3q_{2*}^2 + 1) = 0
+\end{equation}
+which leads to the polynomial equation
+\begin{equation}
+	-\frac{1}{4} \mu \sigma^4 q_{2*}^{\alpha + 1} + k \alpha q_{2*}^{3} + q_{2*}^{\alpha + 5} + 3q_{2*}^{\alpha + 7} = 0
+\end{equation}
+and for $\alpha = 1$ leads to the polynomial equation
+\begin{equation}
+	-\frac{1}{4} \mu \sigma^4 q_{2*}^{2} + k \alpha q_{2*}^{3} + q_{2*}^{6} + 3q_{2*}^8 = 0.
+\end{equation}
+The Jacobian of the dynamics above with $U_0(x) = -\frac{x^4}{4} - \frac{x^2}{2}$, at $(X_*,P_*,q_*,p_*)$ is
+\begin{align}
+J_* = \begin{bmatrix}
+0 & \frac{1}{\mu} & 0 & 0 \\
+-\big< \nabla^2 U_0 \big> & 0 & -q_{2*} \big< \nabla^3 U_0 \big> & 0 \\
+0 & 0 & 0 & \frac{1}{\mu} \\
+-q_{2*} \big< \nabla^3 U_0 \big> & 0 & -\frac{\partial^2 H}{\partial q^2} & 0
+\end{bmatrix}
+\end{align}
+where $\big< \nabla^3 U_0 \big>(0,q_{2*}) = 0$ and
+\begin{equation}
+-\frac{\partial^2 H}{\partial q_2^2}(0,q_{2*}) = \frac{3 \mu \sigma^4}{4 q_{2*}^4} - \frac{k \alpha (\alpha + 1)}{q_{2*}^{\alpha + 2}} - \big< \nabla^2 U_0 \big>(0,q_{2*}) - q_{2*}^2 \big< \nabla^4 U_0 \big>(0,q_{2*}).
+\end{equation}
+When $\alpha = 1$, numerical values for equilibrium $q_{2}$ and Jacobian eigenvalues and eigenvectors are $q_{2*}(\in \mathbb{R}^+) = 0.5844$ and
+$spec(J_*) = 1.6267, -1.6267, 3.2053, -3.2053$, 
+\begin{equation}
+	v(J_*) =
+	\begin{bmatrix}	
+	0.5237 &   -0.5237    &     0    &     0 \\
+	0.8519  &  0.8519    &     0    &     0 \\
+	0    &     0  &  0.2978  &  -0.2978 \\
+	0    &     0  & 0.9546  &  0.9546
+	\end{bmatrix}.
+\end{equation}
+
+
+
+\section{An Action Functional for Nonlinear Quadratic MFGs}
+\label{sec:newHopfCole}
+
+
+Quadratic MFGs with nonlinear Langevin dynamics 
+\begin{equation}
+	\rd x_s = (b(x_s) + u(x_s)) \rd s + \sigma \rd w_s, \; x_0 = x
+\end{equation}
+are associated with the forward backward coupled HJB-FP MF optimality system, with control cost matrix $\mu$
+\begin{align}
+	\rp_t = -\partial_x((b - \frac{v_x}{\mu})\rp) + \frac{\sigma^2}{2} \rp_{xx}, \; \rp(0,x) = \rp_0(x) \\
+	-v_t = q(x;\rp) - \frac{(v_x)^2}{2\mu} + v_x b + \frac{\sigma^2}{2} v_{xx}, \; v(T,x) = \Phi(x) 
+\end{align}
+which under the (exponential) value and and (proportional) density transformed variables $\phi = \exp({\frac{-v}{\sigma^2 \mu}})$, $\Gamma = \frac{\rp}{\phi}$ introduced in \cite{Gueant2009} yield the PDE system
+\begin{align}
+	-\Gamma_t = \frac{q\Gamma}{\sigma^2 \mu} + (\Gamma b)_x - \frac{\sigma^2}{2} \Gamma_{xx} \\
+	\phi_t = \frac{q\Gamma}{\sigma^2 \mu} - \phi_x b - \frac{\sigma^2}{2} \phi_{xx}.
+\end{align}
+Note that in the absence of the passive drift, the PDEs are identical except for a negative sign, thus allowing one to use the nonlinear imaginary time Schrodinger PDE model along with the associated fixed point solution. The variational ansatz for the PDE system maybe plugged into a satisfactory action functional to yield an ODE optimality system on parameters in the ansatz. We therefore need to modify the proposed action in equation (2.28), pp 10, \cite{Ullmo2017} to accomodate the additional terms due to the nonlinear drift. We propose including the additional the term $\int_0^T \rd t \int \rd x \; \mu \sigma^2 \phi_x b \Gamma$ for this purpose. The variation of this quantity is
+\begin{align}
+	\mu \sigma^2 \int_0^T \rd t \int \rd x \; (\phi + \delta \phi)_x b (\Gamma + \delta \Gamma) \overset{O(\delta \phi, \delta \Gamma)}{=}& \mu \sigma^2 \int_0^T \rd t \int \rd x \; \phi_x b \Gamma +  \delta \phi_x \; b \Gamma + \phi_x b \; \delta \Gamma \notag \\
+	=& \mu \sigma^2 \int_0^T \rd t \int \rd x \; \phi_x b \Gamma -  (\Gamma b)_x \; \delta \phi + \phi_x b \; \delta \Gamma
+\end{align}
+by restricting the class of variations $\delta \phi(t,\cdot)$ such that $\delta \phi(\cdot, \pm \infty) = 0$. The required advection terms in the PDE system above are yielded. We note that there is no adhoc assumption made on the nonlinear drift (other than the usual Lipschitz and almost linear growth requirements for existence, uniqueness of SDE solutions) upto this point.
+
+
+
+\section{Integrator Systems theory for Nonlinear Stochastic Systems}
+\label{sec:HopfCole}
+
+
+Consider the optimal control problem (OCP)
+\begin{equation}
+\underset{u}{\min} J(u) := \Eb \left[ \int_{0}^{T} q(x_s,p(s,x_s)) \rd s + \frac{R}{2}u^2 + \Phi(T,x_T) \; \rd s \right] \label{OCP}
+\end{equation}
+subject to the controlled nonlinear diffusion dynamics
+\begin{equation}
+\rd x_s = b(x_s) \rd s + u(s) \rd s + \sigma \rd w_s. \label{dyn}
+\end{equation}
+The associated semilinear Hamilton Jacobi Bellman (HJB) equation and Linear Fokker Planck (FP) equations are
+\begin{align}
+-v_t =& q - \frac{v_x^2}{2R} + v_x b + \frac{\sigma^2}{2} v_{xx} \label{HJB} \\
+p_t =& - \partial_x ((b - \frac{\partial_x v}{R})p) + \frac{\sigma^2}{2} p_{xx} \label{FP}
+\end{align}
+with the terminal time boundary condition $v(T,x) = \Phi(T,x)$. The HJB PDE has a linear representation, obtained using a Hopf Cole transform $\phi := \exp(-v/\sigma^2 R)$ and the ad-hoc assumption $\frac{1}{R} = \sigma^2$. It is as follows
+\begin{equation}
+-\phi_t = -\frac{q \phi}{\sigma^2 R} + \phi_x b + \frac{\sigma^2}{2} \phi_{xx} \label{HopfColeHJB}
+\end{equation}
+with the terminal time boundary condition $\phi(T,x) = \exp(-v(T,x)/\sigma^2 R)$. This PDE has a path integral representation \cite{Fleming1978} which is useful in computing the control \cite{Kappen2005a, Kappen2005b, Theodorou2011IPI}. However, the original paper on this control application titled 'A linear control theory for nonlinear stochastic systems' \cite{Kappen2005a} computes path integral solutions to the above equation by \textit{sampling from the nonlinear passive dynamics}. In what follows we will improve upon this innovation. It will be shown that the above equation may be further reduced from its advection-diffusion form to a pure diffusion PDE.
+
+\subsection{A new Hopf Cole transform} \label{sec:newHopfCol}
+
+\indent Let the primitive or indefinite integral of the passive dynamics be denoted $\int b$. We introduce a modified Hopf Cole transform $\tilde{\phi} := \exp(-(v - R\int b)/\sigma^2 R)$ combined with the assumption $\frac{1}{R} = \sigma^2$. This leads to the following PDE representation of equation \eqref{HJB}
+\begin{equation}
+-\tilde{\phi}_t = -\frac{\tilde{q} \tilde{\phi}}{\sigma^2 R} + \frac{\sigma^2}{2} \tilde{\phi}_{xx} \label{modHopfColeHJB}
+\end{equation}
+with the terminal time boundary condition $\tilde{\phi}(T,x) = \exp\bigg(-\bigg(v(T,x) - R (\int b)(T,x)\bigg)/\sigma^2 R\bigg)$ and where we denote the modified cost $\tilde{q} := q + (R/2)b^2 - (\sigma^2R/2) b_x$.  A verification proof is easily demonstrated by substitution. The calculations $\tilphi_t = -\frac{\tilphi}{\sigma^2 R} v_t$, $\tilphi_x = -\frac{\tilphi}{\sigma^2 R} (v_x + R \nu_x)$, $\tilphi_{xx} = -\frac{\tilphi_x}{\sigma^2 R} (v_x + R \nu_x) - \frac{\tilphi}{\sigma^2 R} (v_{xx} + R\nu_{xx})$ and $\frac{v_x^2}{2R} = \bigg( \frac{\sigma^4 R}{2}\bigg( \frac{\tilphi_x}{\tilphi} \bigg)^2 + \sigma^2 R \frac{\tilphi_x}{\tilphi} \nu_x + \frac{R}{2}\nu_x^2 \bigg)$ are helpful.
+
+\subsection{Interpretation} \label{sec:interpretHopfCole}
+
+Let us observe the case where the dynamics \eqref{dyn} are of overdamped Langevin type, that is, $b = -\nu_x$. It can be observed that the introduced transform is connected to an ergodic density in that case. If the value function is time independent, then the exponent in the proposed transform is recognizable in Gibbs distribution term $\exp(-(v + R \nu)/\sigma^2 R)$. The modification in the cost, $\tilde{q} - q = (R/2)\nu_x^2 - (\sigma^2R/2) \nu_{xx}$, could be interpreted as  some sort of Lagrangian \cite{Elsgolc1961}, that is the difference between kinetic and potential energies associated with the nonlinear passive dynamics. However, in what follows, for the case of Langevin type dynamics \eqref{dyn}, we provide a rigorous interpretation in terms of an alternate, fictitious, integrator system-OCP which is equivalent to the original nonlinear OCP \eqref{OCP}, \eqref{dyn}, $b = -\nu_x$. \\
+\indent The OCP \eqref{OCP}, \eqref{dyn} is equivalent to the PDE optimality system given by equations \eqref{HJB}, \eqref{FP}. Due to the transform introduced in the previous section, this system is equivalent to an optimality system given by equations \eqref{modHopfColeHJB}, \eqref{FP}. The way to interpret this formulation is to ask the question: \textit{what is the integrator system-OCP directly associated with the system \eqref{modHopfColeHJB}, \eqref{FP}?} We answer this question by constructing this integrator system-OCP below. \\
+\indent Let us denote $\tilde{\Phi} := \Phi(T,x) + R \nu(x)$. Consider the OCP
+\begin{equation}
+\underset{u}{\min} J(u) := \Eb \left[ \int_{0}^{T} \tilde{q}(x_s,p(s,x_s)) \rd s + \frac{R}{2}u^2 + \tilde{\Phi}(T,x_T) \; \rd s \right] \label{modOCP}
+\end{equation}
+subject to the controlled linear diffusion dynamics
+\begin{equation}
+\rd x_s = u(s) \rd s + \sigma \rd w_s. \label{lindyn}
+\end{equation}
+The associated semilinear Hamilton Jacobi Bellman (HJB) equation and Linear Fokker Planck (FP) equations are
+\begin{align}
+-\tilde{v}_t =& \tilde{q} - \frac{\tilde{v}_x^2}{2R} + \frac{\sigma^2}{2} \tilde{v}_{xx} \label{modHJB} \\
+p_t =& - (- \frac{\tilde{v}_x}{R}p) + \frac{\sigma^2}{2} p_{xx} \label{modFP}
+\end{align}
+with the terminal time boundary condition $\tilde{v}(T,x) = \tilde{\Phi}(T,x)$. It can then be seen from equations \eqref{HJB} and \eqref{modHJB} that $\tilde{v} = v + R \nu$ is a solution to equation \eqref{modHJB}. If we assume uniqueness of solutions to the system \eqref{modHJB}, \eqref{modFP} by a monotonocity assumption on $\tilde{q}$, then we can conclude by substituting $\tilde{v}_x = v_x + R\nu_x$ into equation \eqref{modFP}, that the PDE systems given by \eqref{HJB}, \eqref{FP} and \eqref{modHJB}, \eqref{modFP} respectively are equivalent. Therefore, \textbf{the nonlinear system OCP given by \eqref{OCP}, \eqref{dyn}, $b = -\nu_x$ is equivalent to the integrator system-OCP \eqref{modOCP}, \eqref{lindyn}}. {\color{blue} (We need to verify that this is not previously known)} Finally, (1) this fact is true for the case of multidimensional dynamics (replace: $\int b$ instead of $-\nu_x$ and $\text{div} \cdot b$ instead of $b_x$) and \\
+(2) the assumption of Langevin dynamics for this fact can be discarded by proving this fact for second order (mechanical/electrical engineering) systems (extend by incorporating the second order dynamics, $\rd x_p = x_v \rd t$, which will appear via the Louiville operator in the PDE system, $\tilde{\phi} := \exp(-(x_v^2/2 + v - R\int b)/\sigma^2 R)$).
+
+\subsection{Applications}
+ 
+\subsubsection{Nonlinear Control: Sampling from Brownian Motion}
+
+Consider a robotic system such as an autonomous car in an aggressive driving environment \cite{Grady2017}. The path integral control has been demonstrated with some degree of success in this prior work as well as others. The critical quality of all sampling based algorithms related to the PDE formulation of the nonlinear OCP problems is that the PDE solution and hence the feedback optimal control is computed only locally. This reduces unsolved issues related to the \textit{curse of dimensionality}. \\
+\indent Since we have constructed an integrator system-OCP which is equivalent to a given nonlinear OCP, as in section \ref{sec:interpretHopfCole}, our new PDE fomulation can find direct applications for nonlinear stochastic problems in robotics in two ways. In order to explain this simply, let use assume that the cost $q$ is independent of the density. This assumption decouples the HJB and FP PDEs and therefore allows us to compute the optimal control at $(t,x)$ by solving only the HJB equation. \\
+(1) The first application of the fictitious OCP representing the nonlinear OCP is that the related path integral solution to equation \eqref{modHopfColeHJB} can be solved by sampling from an integrator system. This means that we may solve a nonlinear OCP by \textit{sampling from a passive linear system instead of a nonlinear system}, thus saving on the computational cost. \textit{The purport is that importance sampling can be eliminated in the path integral control of nonlinear stochastic systems.} \\
+(2) Another approach to solve this problem would be to use the structure of equation \eqref{modHopfColeHJB}, which is a simple heat PDE to solve the control problem. Spectral methods could allow reduction of this problem into a linear systems problem involving back propagation of linear ODEs to solve the PDE over a domain instead of at just a point (the sampling approach). This could be a step towards solving the \textit{curse of dimensionality} problem in nonlinear stochastic OCPs.
+
+\subsubsection{Mathematical Physics: Modeling MF Systems}
+
+A challenging problem in mathematical physics is to build MF models for multiagent systems in which there are \textit{rational, infinitely many anonymous agents who base decisions on information about a collection of the agents}. These key properties constitute the theory of MFGs and are useful in modeling and therefore control of (why is this important?) large scale, self organizing systems and the notion of \textit{emergent behaviour}. \\
+\indent Flocking of agents with nonlinear mobilities is such an example of self organizing system \cite{barbaro2016phase, Bakshi2018Chaos}. In this section we show how the fact presented in section \ref{sec:newHopfCol} and its interpretation \ref{sec:interpretHopfCole} can be used to obtain an optimal control model of the uncontrolled flocking model presented in \cite{barbaro2016phase}. Let us denote the nonlinear Langevin dynamics of the uncontrolled dynamics by $b(p)$. The question we would like to address is: \textit{can we obtain an OCP given by \eqref{modOCP}, \eqref{lindyn} which will result in closed loop dynamics of the original system which has the passive drift $b(p)$?} \\
+\indent An educated guess is to set $\tilde{q} := (1/2)b^2 - (\sigma^2/2) b_x$ and set a high value for $R$ which will cause $v_x/R$ to be a small number at all $(t,x)$. $v$ here is governed by equation \eqref{HJB}. Due to this, we conclude from our interpretation of the fictitious OCP being constructed in section \ref{sec:interpretHopfCole}, the closed loop control will be $-\tilde{v}_x/R = b - v_x/R \approx b$. {(\color{blue} Needs more work, maybe $b(p) = b_1(x) + b_2(p) = -\tilde{v}_x/R = b_1(x) - v_x/R$ and get $b_2 \equiv -v_x/R$)}
+
+\subsubsection{Learning Control: MF Control Computation from Ergodic samples}
+
+The work by Manfred, O. \cite{Opper2017} on learning control using ergodic controlled samples can be immediately extended to MFGs using the fact presented in this section.
+
+\subsubsection{Soliton theory: MFGs}
+
+In the next section we will use the PDE representation in section \ref{sec:newHopfCol} in this section to create a soliton model for highly attractive agents in MFGs.
+
+
+
+\section{Soliton theory for MFGs of agents with Nonlinear Dynamics}
+\label{sec:solitonnonlinearMFG}
+
+
+The MF approach to analyze populations of agents with nonlinear passive dynamics has been previously used to model self organized or controlled flocking in \cite{barbaro2016phase, Bakshi2018Chaos} and crowds in \cite{Burger2011}. We will construct a theory for solitons for a class of nonlinear dynamics appearing in such problems. Consider the OCP \eqref{OCP} under the dynamics \eqref{dyn}, $b = -\nu_x$. The MF optimality system is comprised by equations \eqref{HJB}, \eqref{FP}. We introduced the transform $\tilde{\phi} := \exp(-(v + R\nu)/\sigma^2 R)$ leading to the PDE representation \eqref{modHopfColeHJB} of the equation \eqref{HJB}. To obtain consistent PDE equations on variables $(\tilde{\phi},\rp)$ in the optimality system we may replace $v$ in \eqref{FP} in terms of $\tilde{\phi}$ from the introduced transform. However, we introduce yet another transform on the density which will lead to identical form for both representative PDEs in the optimality system. We \textit{hermitize} \cite{Ullmo2017} the density by $\tilde{\Gamma} := \frac{p}{\tilde{\phi}}$. From equation \eqref{FP} we have
+\begin{equation}
+-\Gamma_t = \frac{\tilde{q} \tilde{\Gamma}}{\sigma^2 R} - \frac{\sigma^2}{2}\tilde{\Gamma}_{xx} \label{modHopfColeFP}
+\end{equation}
+with the initial time boundary condition $\tilde{\Gamma}(0,x) = \frac{p}{\tilde{\phi}}(0,x)$. The derivatives $p_t = \tilGamma_t \tilphi + \tilGamma \tilphi_t$, $p_x = \tilGamma_x \tilphi + \tilGamma \tilphi_x$, $p_{xx} = \tilGamma_{xx} \tilphi + 2 \tilGamma_x \tilphi_x + \tilGamma \tilphi_{xx}$, the calculation $(\sigma^2 \ln \tilphi)_x p = \sigma^2 \frac{\tilphi_x}{\tilphi} \tilGamma \tilphi = \sigma^2 \tilphi_x \tilGamma$ and equation \eqref{modHopfColeHJB} are useful in obtaining the above equation. Thus, the MFG given by the nonlinear OCP \eqref{OCP} subject to dynamics \eqref{dyn}, $b = -\nu$ with the optimality system \eqref{HJB}, \eqref{FP} has an equivalent optimality system given by the Poisson PDEs \eqref{modHopfColeHJB}, \eqref{modHopfColeFP}. In what follows we will exploit the identical PDE forms in this new representation in order to construct soliton solutions to the optimality system.
+
+\subsection{Variational Representation of MF Optimality system} \label{sec:varrep}
+
+The action or functional
+\begin{equation}
+A(\tilphi,\tilGamma) := \int_{0}^{T} \rd t \int_{\Rb^d} \rd x \left[ -\frac{R \sigma^2}{2} \big( \tilphi(\tilGamma_t) - (\tilphi_t) \tilGamma \big) - \frac{R \sigma^4}{2} \tilphi_x \cdot \tilGamma_x - \tilphi \tilde{q} \tilGamma \right]
+\end{equation}
+introduced in \cite{Ullmo2017}, has the variational property that $\delta A/\delta \tilGamma = 0$ and $\delta A/\delta \tilphi = 0$ are equivalent to the equations \eqref{modHopfColeHJB}, \eqref{modHopfColeFP}. Therefore this action provides a formal representation of the optimality system in the transient state. Denoting $q_\nu := (R/2)\nu_x^2 - (\sigma^2R/2)$ we have $\tilde{q} = q + q_\nu$. We now assume $q = U(x) + f(p)$ with $f$ being a nonlinear function of the density. Then the simplified form of the action is
+\begin{equation}
+A(\tilphi,\tilGamma) := \int_{0}^{T} \rd t \int_{\Rb^d} \rd x \left[ -\frac{R \sigma^2}{2} \big( \tilphi(\tilGamma_t) - (\tilphi_t) \tilGamma \big) - \frac{R \sigma^4}{2} \tilphi_x \cdot \tilGamma_x - \tilphi \big( U + q_\nu \big) \tilGamma - F(\tilphi \tilGamma) \right] \label{simplifyaction}
+\end{equation}
+where $F(p) = \int^p f(p) \rd p$. Remember that $f(p)$ will be chosen to be a strictly decreasing function later. We identify the following terms as kinetic, potential and interaction energies
+\begin{align}
+E_\text{kin} = -\frac{R \sigma^4}{2} \tilphi_x \cdot \tilGamma_x \\
+E_\text{pot} = -\big< U + q_\nu \big> \\
+E_\text{int} = -\int_{\Rb^d} \rd x \; F(p)
+\end{align}
+with the total energy defined as $E_\text{tot} = E_\text{kin} + E_\text{pot} + E_\text{int}$. The negative signs in the last two expressions have been chosen so because of our monotonicity assumptions on $F(p)$. The argument using Noether's theorem \cite{Papas2014} in \cite{Ullmo2017} applies to the part of the integrand in the action which is not explicitly time dependent, so that $E_\text{tot}$ is conserved {\color{blue} (which I do not understand)} implying
+\begin{equation}
+A(\tilphi,\tilGamma) = \int_{0}^{T} \rd t \int_{\Rb^d} \rd x \left[ -\frac{R \sigma^2}{2} \big( \tilphi(\tilGamma_t) - (\tilphi_t) \tilGamma \big) \right] + E_\text{tot} T.
+\end{equation}
+
+\subsection{Gaussian Ansatz and Soliton Dynamics}
+
+We revert to the notation $\mu = R$ for the control cost in this section. Since equations \eqref{modHopfColeHJB}, \eqref{modHopfColeFP} have an identical form with an asymmetry only in the direction of time, we introduced the following Gaussian ansatz \cite{Ullmo2017}
+\begin{align}
+\tilphi(t,x) = \exp\left( \frac{-\gamma_t + P_t \cdot x}{\mu \sigma^2} \right) \frac{1}{(2 \pi \Sigma_t^2)^\frac{1}{4}} \exp\left( -\frac{(x - X_t)^2}{(2 \Sigma_t^2)^2} (1 - \frac{\Lambda_t}{\mu \sigma^2}) \right) \\
+\tilGamma(t,x) = \exp\left( \frac{+\gamma_t + P_t \cdot x}{\mu \sigma^2} \right) \frac{1}{(2 \pi \Sigma_t^2)^\frac{1}{4}} \exp\left( -\frac{(x - X_t)^2}{(2 \Sigma_t^2)^2} (1 + \frac{\Lambda_t}{\mu \sigma^2}) \right)
+\end{align}
+by assuming that the population of agents in the MFG rapidly concentrates around its mean value, $X_t$ and moves as a static Gaussian shaped formation with covariance $\Sigma_t$. The Gaussian density can be therefore readily obtained as $p(t,x) = \frac{1}{(2 \pi \Sigma_t^2)^\frac{1}{2}} \exp\left( -\frac{(x - X_t)^2}{(2 \Sigma_t^2)^2} \right)$. \\
+\indent We will now consider exclusively the case $d = 1$. Applying this ansatz in the action will provide the ODE soliton dynamics on the variables $(X_t, P_t, \Sigma_t, \Lambda_t)$. This gives us the Lagrangian form of the action
+\begin{equation}
+A[\tilphi,\tilGamma] = \int_{0}^T \rd t \; L(t)
+\end{equation}
+where $L(t) = L_\tau(t) + E_\text{tot}$ and the expressions for $L_\tau$, $E_\text{kin}$ are given in equations (B.3), (B.4) in \cite{Ullmo2017}.
+
+\subsubsection{Polynomial cost}
+
+Now, we choose $f(\cdot) = g p^\alpha$, $\alpha > 0$. Modifying the first term in the Lagrangian as $\int_{0}^{T} \dot{P_t} X_t = {X_t} P_t\bigg|_{0}^{T} - \int_{0}^{T} \dot{X_t} P_t$ we arrive at a Hamiltonian system for canonical variables defined as follows. Using the canonical variables $(q_1, p_1, q_2, p_2) = (X_t, P_t, \Sigma_t, \frac{\Lambda_t}{2 \Sigma_t} = \frac{\Lambda_t}{2q_2})$ we have the Langrangian
+\begin{equation}
+L(t) = - p_2 \dot{q_1} - p_2 \dot{q_2} + \frac{P_t^2}{2 \mu} + \frac{p_2^2}{2 \mu} - \frac{\mu\sigma^4}{8 q_2^2} + \frac{k}{q_2^\alpha} - \big< U + q_\nu \big>
+\end{equation}
+where $k := \frac{g}{\alpha + 1} \frac{1}{\sqrt{(\alpha+1) (2 \pi)^\alpha}}$. Since $\delta L$ must be set equal to zero to obtain dynamical equations, we may equivalently consider the Lagrangian
+\begin{equation}
+	L(t) = p_2 \dot{q_1} + p_2 \dot{q_2} - \left( \frac{p_1^2}{2 \mu} + \frac{p_2^2}{2 \mu} - \frac{\mu\sigma^4}{8 q_2^2} + \frac{k}{q_2^\alpha} - \big< U + q_\nu \big> \right) = p_2 \dot{q_1} + p_2 \dot{q_2} - H(q,p)
+\end{equation}
+with the Hamiltonian, recognized as the conserved total energy $E_\text{tot}(t)$,
+\begin{equation}
+H(q,p) \triangleq \frac{p_1^2}{2 \mu} + \frac{p_2^2}{2 \mu} - \frac{\mu\sigma^4}{8 q_2^2} + \frac{k}{q_2^\alpha} - \big< U + q_\nu \big>(q_1,q_2).
+\end{equation}
+In this standard  Hamiltonian system, identifying the Poisson conjugate momenta $(p_1,p_2) = (P_t,\frac{\Lambda_t}{2 \Sigma_t})$ and position variables $(q_1,q_2) = (X_t,\Sigma_t)$, the equations of motion are
+\begin{equation}
+\begin{bmatrix}
+\dot{q_1} \\ \dot{p_1} \\ \dot{q_2} \\ \dot{p_2}
+\end{bmatrix} = \begin{bmatrix}
+\nabla_{p_1} H \\ -\nabla_{q_1} H \\ \nabla_{p_2} H \\ -\nabla_{q_2} H
+\end{bmatrix} = 
+\begin{bmatrix}
+\frac{p_1}{\mu} \\  \big< \nabla (U + q_\nu) \big> \\ \frac{p_2}{\mu} \\ -\frac{\mu \sigma^4}{4 q_2^3} + \frac{k \alpha}{q_2^{\alpha + 1}} - q_2 \big< \nabla^2 (U + q_\nu) \big> 
+\end{bmatrix}
+\end{equation}
+because $\frac{\partial \big< f \big>}{\partial X_t}(X_t,\Sigma_t) = \big< \nabla f \big>$, $\frac{\partial \big< f \big>}{\partial \Sigma_t}(X_t,\Sigma_t) = \Sigma_t \big< \nabla^2 f \big>$ for any smooth function $f$, due to the Gaussian solution ansatz.The uncoupled dynamics can be obtained by applying the Dirac delta limit of the Gaussian density to the unevaluated expectations in the above dynamical equations of motion {\color{blue} how?}. \\
+Specifically, if the nonlinear dynamics are occurring under a passive bistable potential $\nu = \frac{x^4}{4} - \frac{x^2}{2}$ with an additional potential $U_0 = \frac{(x-1)^2}{2}$ then we compute the coupled soliton dynamics here. Note that $q_\nu = \frac{x^6}{2} - x^4 + x^2\left(\frac{1 - 3\sigma^2}{2}\right) + \frac{\sigma^2}{2}$, $\nabla q_\nu = 3x^5 - 4x^3 + x(1 - 3 \sigma^2)$, $\nabla^2 q_\nu = 15x^4 - 12x^2 + (1 - 3\sigma^2)$ and $\nabla U_0 = (x - 1)^2$, $\nabla^2 U_0 = 1$.
+
+\subsection{Verification of Mean Dynamics by Ito Stochastic Calculus}
+
+{\color{blue} I can do this. This will show that the mean dynamics obtained directly from the optimally controlled SDE \eqref{dyn} result in the mean dynamics given by our Gaussian ansatz. Is this necessary? This is the equivalent of using Ehrenfest relations for verification, which had no further use in \cite{Ullmo2017}. Further, it is excessively complicated to thus verify the variance dynamics, which will display inconsistency in the nature of the presented results}
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{References}
+
+
+	
+\end{document}

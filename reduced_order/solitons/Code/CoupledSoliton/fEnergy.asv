@@ -1,0 +1,26 @@
+% CONFIDENTIAL (C) Mitsubishi Electric Research Labs (MERL) 2018
+% Author: Kaivalya Bakshi; Date: 24 Apr 2018; Function for computing
+% total energy of solitons with Hamiltonian system described in MERL report
+% based on Quadratic MFG paper by Ullmo et. al (https://arxiv.org/pdf/1708.07730.pdf). 
+% We extend the published example by admitting coupled and further non trivial passive drift in the SDE 
+% dynamics
+
+function E = fEnergy(X)
+
+global mu sigma par Sigmastar c % c = 0/1 for uncoupled/coupled pos, var dynamics
+
+q1 = X(1,1); p1 = X(2,1); q2 = X(3,1); p2 = X(4,1); g = par.g; alpha = par.alpha;
+k = g/(1+alpha)/sqrt(1 + alpha)/(2*pi)^(alpha/2);
+
+% Total energy of soliton with 1D SDE dynamics and U0 = -x^4/4 - x^2/2
+if c == 1
+    E = Pt.^2./(2*mu) + p.^2/(2*mu*Sigmastar^2) - mu*sigma^4./(8.*Sigmastar^2.*q.^2) ...
+        + k./((Sigmastar.*q).^alpha) - (Xt.^4 + 6*(Sigmastar.*q).^2.*Xt.^2 + 3.*(Sigmastar.*q).^4)./4 ...
+        - (Xt.^2 + (Sigmastar.*q).^2)./2;
+else
+   E(1,:) = Pt.^2./2./mu + (-Xt.^4./4 - Xt.^2./2);
+   E(2,:) = p.^2./(2*mu*Sigmastar^2) ...
+            - mu*sigma^4./4./Sigmastar^2.*(1./2./q.^2 - 1./par.alpha./q.^par.alpha);
+end
+
+end
